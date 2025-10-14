@@ -1,0 +1,25 @@
+name: gen_spec_geoAI
+channels:
+  - conda-forge
+  - pytorch
+
+dependencies:
+  - python=3.12
+  - pip
+  - ipykernel
+
+  # PyTorch + CUDA
+  - pytorch=2.4
+  - torchvision
+  - pytorch-cuda=12.1
+
+  # Geo / datasets
+  - rasterio            # pulls GDAL automatically
+  - torchgeo
+
+  # HF stack for loading models + embeddings
+  - transformers>=4.44
+  - accelerate
+  - safetensors
+  - sentencepiece
+
