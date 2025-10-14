@@ -10,7 +10,7 @@ generalist_vs_specialized_geoAI/
 │  └─ data.yaml                    # URLs, expected checksums, paths
 ├─ notebooks/
 │  ├─ 00_sanity_check.ipynb
-│  └─ 10_embed_examples.ipynb
+│  └─ 01_embed_examples.ipynb
 ├─ scripts/
 │  ├─ 00_download_eurosat.py          # download only (no unzip)
 │  └─ 01_prepare_eurosat.py           # unzip, verify, organize

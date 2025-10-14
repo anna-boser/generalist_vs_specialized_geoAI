@@ -1,1 +1,2 @@
-DATA_PATH: ../waves/generalist_vs_specialized_geoAI
+DATA_PATH: '../waves/generalist_vs_specialized_geoAI'
+EUROSAT_URL: 'https://zenodo.org/records/7711810/files/EuroSAT_MS.zip'
