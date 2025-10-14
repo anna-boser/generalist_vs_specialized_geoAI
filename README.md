@@ -1,6 +1,7 @@
 # Generalist vs. Specialized GeoAI
 Project comparing generalist multimodal models to specialized geospatial models for satellite data analysis. 
 
+```
 ├── data/
 │   ├── README.md             # where/how to get benchmark (EuroSAT)
 ├── notebooks/
@@ -19,3 +20,4 @@ Project comparing generalist multimodal models to specialized geospatial models 
 ├── .gitignore
 ├── LICENSE
 └── README.md                 # Here!
+```
