@@ -29,13 +29,12 @@ Data is stored separately on the server. We store it at: ../waves/generalist_vs_
 ```
 
 
-## Setup 
+## Setup environments
 
-
-### Environment
+### Complete environment
 ```
 # 1. Create environment
-conda env create -f environment.yml
+conda env create -f environments/complete.yml
 
 # 2. Activate
 conda activate gen_spec_geoAI
@@ -48,4 +47,14 @@ To verify:
 
 ```
 python -c "import torch, rasterio, transformers; print(torch.__version__, rasterio.__version__)"
+```
+
+### Smaller environment for local development (no torch, torchgeo, etc.)
+
+```
+# 1. Create environment
+conda env create -f environments/local.yml
+
+# 2. Activate
+conda activate geoai_local
 ```
