@@ -9,8 +9,7 @@ generalist_vs_specialized_geoAI/
 ├─ configs/
 │  └─ data.yaml                    # URLs, expected checksums, paths
 ├─ notebooks/
-│  ├─ 00_sanity_check.ipynb
-│  └─ 01_embed_examples.ipynb
+│  ├─ 00_explore_eurosat.ipynb
 ├─ scripts/
 │  ├─ 00_download_eurosat.py          # download only (no unzip)
 └─ src/
@@ -45,7 +44,7 @@ python -m ipykernel install --user --name gen_spec_geoAI --display-name "General
 
 To verify: 
 
-```
+```bash
 python -c "import torch, rasterio, transformers; print(torch.__version__, rasterio.__version__)"
 ```
 
@@ -57,4 +56,24 @@ conda env create -f environments/local.yml
 
 # 2. Activate
 conda activate geoai_local
+```
+
+## Download data
+
+Replace the data paths with your local one. 
+
+### EuroSAT
+
+```bash
+wget -c "https://zenodo.org/records/7711810/files/EuroSAT_MS.zip?download=1" -O /home/waves/generalist_vs_specialized_geoAI/EuroSAT/EuroSAT_MS.zip -d /home/waves/generalist_vs_specialized_geoAI/EuroSAT/raw
+```
+
+### [BigEarthNet](https://bigearth.net/)
+
+```bash
+# S1
+tar --zstd -xf /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S1/raw/BigEarthNet-S1.tar.zst -C /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S1/raw
+
+# S2
+tar --zstd -xf /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S2/raw/BigEarthNet-S2.tar.zst -C /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S2/raw
 ```
