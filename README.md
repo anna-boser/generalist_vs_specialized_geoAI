@@ -28,7 +28,7 @@ Data is stored separately on the server. We store it at: ../waves/generalist_vs_
 ```
 
 
-## Setup environments
+## Set up environments
 
 ### Complete environment
 ```
@@ -64,16 +64,36 @@ Replace the data paths with your local one.
 
 ### EuroSAT
 
+#### Multispectral (S2): 
 ```bash
-wget -c "https://zenodo.org/records/7711810/files/EuroSAT_MS.zip?download=1" -O /home/waves/generalist_vs_specialized_geoAI/EuroSAT/EuroSAT_MS.zip -d /home/waves/generalist_vs_specialized_geoAI/EuroSAT/raw
+wget -c "https://zenodo.org/records/7711810/files/EuroSAT_MS.zip?download=1" -O /home/waves/generalist_vs_specialized_geoAI/EuroSAT/EuroSAT_MS.zip
 ```
 
-### [BigEarthNet](https://bigearth.net/)
+<!-- ```python
+from datasets import load_dataset
 
+S2 = load_dataset("blanchon/EuroSAT_MSI")
+``` -->
+
+#### Sentinel-1 (SAR): 
 ```bash
-# S1
-tar --zstd -xf /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S1/raw/BigEarthNet-S1.tar.zst -C /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S1/raw
-
-# S2
-tar --zstd -xf /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S2/raw/BigEarthNet-S2.tar.zst -C /home/waves/generalist_vs_specialized_geoAI/BigEarthNet-S2/raw
+wget -c "https://huggingface.co/datasets/wangyi111/EuroSAT-SAR/resolve/main/EuroSAT-SAR.zip?download=1" -O /home/waves/generalist_vs_specialized_geoAI/EuroSAT/EuroSAT_SAR.zip
 ```
+
+<!-- ```python
+from datasets import load_dataset
+
+S1 = load_dataset("wangyi111/EuroSAT-SAR")
+``` -->
+
+<!-- #### Landsat (L): 
+
+Only on hugging face? 
+```python
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset("isaaccorley/eurosat-l")
+``` -->
+
+Then notebookds/00_unzip_eurosat.ipynb to unzip them

@@ -20,6 +20,7 @@ dependencies:
   # Geo / datasets
   - rasterio            # pulls GDAL automatically
   - torchgeo
+  - terratorch
 
   # HF stack for loading models + embeddings
   # - transformers>=4.44

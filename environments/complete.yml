@@ -13,13 +13,14 @@ dependencies:
   - requests
 
   # PyTorch + CUDA
-  # - pytorch=2.4
+  - pytorch=2.4
   - torchvision
   - pytorch-cuda=12.1
 
   # Geo / datasets
   - rasterio            # pulls GDAL automatically
   - torchgeo
+  - terratorch
 
   # HF stack for loading models + embeddings
   - transformers>=4.44
